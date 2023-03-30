@@ -1,18 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Container from "./components/Container/Container";
+// import Container from "./components/Container/Container";
+
+// import Instructions from "./components/Instructions/Instructions";
+// import pic from "images/pexels-alejandro-barrón-96715.jpg";
+// import Login from "Login/Login";
+import Snack from "./components/Snackbar/Snack";
+import GoogleWrapper from "./components/GoogleWrapper/GoogleWrapper";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Header from "./components/Header/Header";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Container />}>
-          <Route index element={<Container />} />
-          <Route path="field" element={<Container />} />
-          <Route path="semifield" element={<Container />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Fragment>
+      <Jumbotron /> 
+      <Header /> 
+      <GoogleWrapper /> 
+    </Fragment>
+       
+    // <GoogleWrapper />    
   );
 }
 
