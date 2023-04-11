@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material';
 import React from 'react'
-import Image from '../../images/Corn.jpg'
+import Image from '../../images/Wheat3.jpg'
 
-export const Jumbotron = () => (
+const Jumbotron = () => (
         <Grid sx={{
                 backgroundImage: `url(${Image})`,
                 backgroundRepeat: 'no-repeat',
