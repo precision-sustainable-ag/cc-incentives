@@ -11,7 +11,7 @@ const Header = ({ currentTab, setCurrentTab }) => {
         <nav>
         <AppBar position="static" >
             <Toolbar>
-            <Grid justify={"space-between"} container>
+            {/* <Grid justify={"space-between"} container> */}
                 <Grid xs={4} item>
                     <Grid container justify={"center"}>
                         <Tabs 
@@ -32,7 +32,7 @@ const Header = ({ currentTab, setCurrentTab }) => {
                     </Grid>
                 </Grid>
                 <Grid item xs={1} />
-            </Grid>
+            {/* </Grid> */}
             </Toolbar>
         </AppBar>
         </nav>
