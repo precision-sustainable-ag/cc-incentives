@@ -1,18 +1,14 @@
-import { Grid } from '@mui/material';
+import AspectRatio from '@mui/joy/AspectRatio';
 import React from 'react'
-import Image from '../../images/Wheat3.jpg'
+import Image from '../../images/Logo.png'
 
 const Jumbotron = () => (
-        <Grid sx={{
-                backgroundImage: `url(${Image})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                color: '#fff',
-                height: '180px',
-                position: 'relative',
-                zIndex: -2,
-                }}
-        />
+    <AspectRatio objectFit="contain" maxHeight="100px" justifyContent="flex-end">
+            <img
+                src={Image}
+                alt="A beautiful landscape."
+            />
+    </AspectRatio>
 )
 
 export default Jumbotron;
