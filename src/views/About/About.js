@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Typography, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import Header from '../../components/Header/Header';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
@@ -85,6 +86,11 @@ export const About = ({ currentTab, setCurrentTab }) => {
         </Fragment>
         
     )
+}
+
+About.propTypes = {
+    currentTab: PropTypes.number,
+    setCurrentTab: PropTypes.func,
 }
 
 export default About;

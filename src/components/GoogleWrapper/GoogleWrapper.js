@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GoogleWrapper = ({ type }) => {
     if(type === 'form'){
@@ -16,5 +17,9 @@ const GoogleWrapper = ({ type }) => {
     }
   
 };
+
+GoogleWrapper.propTypes = {
+    type: PropTypes.string
+}
 
 export default GoogleWrapper;

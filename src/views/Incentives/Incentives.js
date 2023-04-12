@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Button, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import Header from '../../components/Header/Header';
@@ -27,6 +28,11 @@ export const Incentives = ({ currentTab, setCurrentTab }) => {
             </Grid>
         </Fragment>
     )
+}
+
+Incentives.propTypes = {
+    currentTab: PropTypes.number,
+    setCurrentTab: PropTypes.func,
 }
 
 export default Incentives;

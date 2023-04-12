@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, Tabs, Tab, Grid  } from '@mui/material';
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 const Header = ({ currentTab, setCurrentTab }) => {
     const handleChange = (event, newValue) => {
@@ -38,5 +39,10 @@ const Header = ({ currentTab, setCurrentTab }) => {
         </nav>
     );
 };
+
+Header.propTypes = {
+    currentTab: PropTypes.number,
+    setCurrentTab: PropTypes.func,
+}
 
 export default Header;
