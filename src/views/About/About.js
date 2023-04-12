@@ -10,7 +10,7 @@ export const About = ({ currentTab, setCurrentTab }) => {
         <Fragment>
             <Jumbotron/>
             <Header currentTab={currentTab} setCurrentTab={setCurrentTab} />
-            <Grid container spacing={3}>
+            <Grid container spacing={1} direction="column" alignItems="center" justifyContent="center">
                 <Grid item>
                     <Typography variant='h5'>
                         <br/>Welcome to the Cover Crops Incentives Explorer Tool!
