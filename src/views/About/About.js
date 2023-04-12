@@ -24,7 +24,7 @@ export const About = ({ currentTab, setCurrentTab }) => {
                         <br/>Welcome to the Cover Crops Incentives Explorer Tool!<br/>
                     </Typography>
                     <Typography variant='body2'>
-                        <br/>Across the United States, there are many programs supporting the adoption of cover crops. This tool presents some of those programs, available at the federal and state levels, and summarizes their main characteristics. For the programs at the state level, we focused on the states where our Social Science Team at the University of Georgia has been conducting interviews to learn about farmers’ opinions on conservation practices. The tool is divided into five sheets (accessed by clicking on the tabs at the bottom of the page): <br/> <br/>
+                        <br/>Across the United States, there are many programs supporting the adoption of cover crops. This tool presents some of those programs, available at the federal and state levels, and summarizes their main characteristics. For the programs at the state level, we focused on the states where our Social Science Team at the University of Georgia has been conducting interviews to learn about farmers’ opinions on conservation practices. The tool is divided into four sheets (accessed by clicking on the tabs at the bottom of the page): <br/> <br/>
                     </Typography>
 
                     <Grid item container spacing={3}  alignItems="center" justifyContent="center">
