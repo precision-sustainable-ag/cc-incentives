@@ -3,11 +3,11 @@ import Header from '../../components/Header/Header';
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import GoogleWrapper from '../../components/GoogleWrapper/GoogleWrapper';
 
-export const Feedback = () => {
+export const Feedback = ({ currentTab, setCurrentTab }) => {
     return (
         <Fragment>
             <Jumbotron/>
-            <Header/>
+            <Header currentTab={currentTab} setCurrentTab={setCurrentTab} />
             <GoogleWrapper type='form' />
         </Fragment>
     )

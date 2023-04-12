@@ -1,52 +1,42 @@
 import React from 'react'
-import { AppBar, IconButton, Typography, Toolbar, Menu, MenuItem  } from '@mui/material';
+import { AppBar, Toolbar, Tabs, Tab, Grid  } from '@mui/material';
 import { Link } from 'react-router-dom'
-import MenuIcon from '@mui/icons-material/Menu';
 
-import About from '../../views/About/About';
-import Incentives from '../../views/Incentives/Incentives';
-import Feedback from '../../views/Feedback/Feedback';
-
-
-const Header = () => {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
+const Header = ({ currentTab, setCurrentTab }) => {
+    const handleChange = (event, newValue) => {
+        setCurrentTab(newValue);
     };
 
     return (
-        <AppBar position="static">
+        <nav>
+        <AppBar position="static" >
             <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
-                <MenuIcon />
-                </IconButton>
-                <Typography variant="h6">
-                    Cover Crop Incentives Explorer
-                </Typography>
+            <Grid justify={"space-between"} container>
+                <Grid xs={4} item>
+                    <Grid container justify={"center"}>
+                        <Tabs 
+                            value={currentTab} 
+                            onChange={handleChange} 
+                            aria-label="basic tabs example"
+                            TabIndicatorProps={{
+                                style: {
+                                    backgroundColor: "#FFF",
+                                    textColor: "#FFF"
+                                }
+                            }}s
+                        >
+                            <Tab label="About" component={Link} to="/" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                            <Tab label="Incentives" component={Link} to="/incentives" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                            <Tab label="Feedback" component={Link} to="/feedback" selected textColor="#FFF" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                        </Tabs>
+                    </Grid>
+                </Grid>
+                <Grid item xs={1} />
+            </Grid>
             </Toolbar>
-
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                {/* <MenuItem onClick={handleClose} containerElement={<Link component={About} to="/" />}>About</MenuItem>
-                <MenuItem onClick={handleClose} containerElement={<Link component={Incentives} to="/incentives" />}>Incentives</MenuItem>
-                <MenuItem onClick={handleClose} containerElement={<Link component={Feedback} to="/feedback" />}>Feedback</MenuItem> */}
-
-                <MenuItem onClick={handleClose} component={Link} to="/" >About</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/incentives" >Incentives</MenuItem>
-                <MenuItem onClick={handleClose} component={Link} to="/feedback" >Feedback</MenuItem>
-            </Menu>
         </AppBar>
-    )
-}
+        </nav>
+    );
+};
 
 export default Header;

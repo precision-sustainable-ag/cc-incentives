@@ -11,7 +11,7 @@ const Jumbotron = () => (
                 height: '180px',
                 position: 'relative',
                 zIndex: -2,
-            }}
+                }}
         />
 )
 
