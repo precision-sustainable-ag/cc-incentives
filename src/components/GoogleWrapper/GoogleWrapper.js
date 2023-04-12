@@ -11,7 +11,7 @@ const GoogleWrapper = ({ type }) => {
     } else {
         return (
             <div>
-              <iframe style={{width:'100%', height:"65vh", overflow:'hidden', frameborder:0}}  width="100%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR7Y4FIz60wh1UBMV_pq87WCVNthXhPhoSDV2tzrsv7Psa-ds58EpH5HC9Daky3YnZ4YLMvWmiMN69G/pubhtml?widget=true&amp;headers=false"></iframe>
+              <iframe style={{width:'100%', height:"60vh", overflow:'hidden', frameborder:0}}  width="100%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR7Y4FIz60wh1UBMV_pq87WCVNthXhPhoSDV2tzrsv7Psa-ds58EpH5HC9Daky3YnZ4YLMvWmiMN69G/pubhtml?widget=true&amp;headers=false"></iframe>
             </div>
         );
     }
