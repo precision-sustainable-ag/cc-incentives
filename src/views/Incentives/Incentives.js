@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 
 import Jumbotron from '../../components/Jumbotron/Jumbotron';
@@ -20,9 +20,11 @@ export const Incentives = ({ currentTab, setCurrentTab }) => {
             <Header currentTab={currentTab} setCurrentTab={setCurrentTab} />
             <GoogleWrapper type='incentives' />
             <br/>
-            <Button onClick={handleNav} variant="contained" color="primary">
-                Give Feedback 
-            </Button>
+            <Grid container spacing={1} alignItems="center" justifyContent="center">
+                <Button onClick={handleNav} variant="contained" color="primary">
+                    Give Feedback 
+                </Button>
+            </Grid>
         </Fragment>
     )
 }

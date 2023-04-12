@@ -8,37 +8,34 @@ const Header = ({ currentTab, setCurrentTab }) => {
     };
 
     return (
-            <nav>
-                <AppBar position="static" color="primary" flexGrow={1}>
-                    <Toolbar>
-                    <Grid justify={"space-between"} container  direction="column" alignItems="center" justifyContent="center">
-                        <Grid xs={4} item>
-                            <Grid container justify={"center"}>
-                                <Tabs 
-                                    value={currentTab} 
-                                    onChange={handleChange} 
-                                    aria-label="basic tabs example"
-                                    TabIndicatorProps={{
-                                        style: {
-                                            backgroundColor: "#FFF",
-                                            textColor: "#FFF"
-                                        }
-                                    }}
-                                    // fullWidth={true}
-                                    // centered
-                                    // sx={{ margin: "auto" }}
-                                >
-                                    <Tab label="About" component={Link} to="/" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
-                                    <Tab label="Incentives" component={Link} to="/incentives" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
-                                    <Tab label="Feedback" component={Link} to="/feedback" selected textColor="#FFF" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
-                                </Tabs>
-                            </Grid>
+        <nav>
+            <AppBar position="static" color="primary" flexGrow={1}>
+                <Toolbar>
+                <Grid justify={"space-between"} container  direction="column" alignItems="center" justifyContent="center">
+                    <Grid xs={4} item>
+                        <Grid container justify={"center"}>
+                            <Tabs 
+                                value={currentTab} 
+                                onChange={handleChange} 
+                                aria-label="basic tabs example"
+                                TabIndicatorProps={{
+                                    style: {
+                                        backgroundColor: "#FFF",
+                                        textColor: "#FFF"
+                                    }
+                                }}
+                            >
+                                <Tab label="About" component={Link} to="/" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                                <Tab label="Incentives" component={Link} to="/incentives" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                                <Tab label="Feedback" component={Link} to="/feedback" selected textColor="#FFF" sx={{ color: (theme) => theme.palette.text.primary, '&.Mui-selected': { color: (theme) => theme.palette.background.paper } }} />
+                            </Tabs>
                         </Grid>
-                        <Grid item xs={1} />
                     </Grid>
-                    </Toolbar>
-                </AppBar>
-            </nav>
+                    <Grid item xs={1} />
+                </Grid>
+                </Toolbar>
+            </AppBar>
+        </nav>
     );
 };
 
